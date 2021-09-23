@@ -1,14 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MarkerForm } from './components/marker-form.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, GoogleMapsModule],
+  declarations: [AppComponent, MarkerForm],
+  imports: [BrowserModule, HttpClientModule, CommonModule, GoogleMapsModule, ReactiveFormsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

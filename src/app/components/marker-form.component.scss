@@ -1,0 +1,59 @@
+.form-fields {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 75px auto;
+
+  b {
+    text-align: right;
+    line-height: 20px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #e2bdbd;
+
+    &:focus-visible {
+      outline: none;
+      border-bottom: 2px solid #b79191;
+    }
+  }
+}
+
+img {
+  width: 20vw;
+  margin: 4px auto;
+  display: block;
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  width: 50%;
+
+  &[type='submit'] {
+    background: #4caf50;
+
+    &:disabled {
+      background: #4caf509c;
+    }
+
+    &:active {
+      background: #4caf50e0;
+    }
+  }
+
+  &[type='button'] {
+    background: #fb3324;
+
+    &:active {
+      background: #fb3324ab;
+    }
+  }
+}
